@@ -12,211 +12,261 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: Georgia, 'Times New Roman', serif;
             line-height: 1.6;
-            color: #333;
-            background: #f5f5f5;
+            color: #f5f3ed;
+            background: #1a1a1a;
         }
 
         header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 4rem 2rem;
-            text-align: center;
+            background: #1a1a1a;
+            padding: 3rem 4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            border-bottom: 1px solid #2a2a2a;
         }
 
-        header h1 {
-            font-size: 2.5rem;
+        .header-left h1 {
+            font-size: 3.5rem;
             margin-bottom: 0.5rem;
+            color: #f5f3ed;
+            font-weight: normal;
         }
 
-        header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-
-        nav {
-            background: white;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
+        .header-left p {
+            font-size: 1rem;
+            color: #b8b5a8;
+            font-style: italic;
         }
 
         nav ul {
             list-style: none;
             display: flex;
-            justify-content: center;
-            padding: 1rem;
-            flex-wrap: wrap;
+            gap: 2rem;
+            margin-top: 0.5rem;
         }
 
         nav a {
-            color: #667eea;
+            color: #f5f3ed;
             text-decoration: none;
-            padding: 0.5rem 1.5rem;
+            font-size: 1.1rem;
             transition: color 0.3s;
-            font-weight: 500;
+            position: relative;
         }
 
         nav a:hover {
-            color: #764ba2;
+            color: #e07a5f;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #f56a07;
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 3rem 2rem;
+            padding: 4rem 2rem;
         }
 
         section {
-            margin-bottom: 4rem;
+            margin-bottom: 5rem;
         }
 
         h2 {
-            font-size: 2rem;
-            color: #667eea;
+            font-size: 2.5rem;
+            color: #f5f3ed;
             margin-bottom: 2rem;
-            text-align: center;
+            font-weight: normal;
+            border-bottom: 2px solid #e07a5f;
+            padding-bottom: 0.5rem;
         }
 
         .about-content {
-            background: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            background: #242424;
+            padding: 2.5rem;
+            border-left: 4px solid #e07a5f;
             max-width: 800px;
-            margin: 0 auto;
+            font-size: 1.1rem;
         }
 
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 3rem;
         }
 
         .project-card {
-            background: white;
-            border-radius: 8px;
+            background: #242424;
             padding: 2rem;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border: 1px solid #2a2a2a;
             transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .project-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+            box-shadow: 0 8px 16px rgba(224, 122, 95, 0.2);
         }
 
         .project-card h3 {
-            color: #667eea;
+            color: #f5f3ed;
             margin-bottom: 1rem;
-            font-size: 1.5rem;
+            font-size: 1.8rem;
+            font-weight: normal;
         }
 
         .project-card p {
+            color: #b8b5a8;
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+        }
+
+        .project-image {
+            width: 100%;
+            height: 250px;
+            background: #2a2a2a;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             color: #666;
-            margin-bottom: 1rem;
+            font-style: italic;
+            border: 1px solid #333;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .tech-tags {
             display: flex;
             flex-wrap: wrap;
             gap: 0.5rem;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
         }
 
         .tech-tag {
-            background: #f0f0f0;
-            padding: 0.25rem 0.75rem;
-            border-radius: 4px;
-            font-size: 0.85rem;
-            color: #555;
+            background: #2a2a2a;
+            padding: 0.3rem 0.9rem;
+            font-size: 0.9rem;
+            color: #b8b5a8;
+            border: 1px solid #333;
         }
 
         .project-links {
             display: flex;
             gap: 1rem;
-            margin-top: 1rem;
         }
 
         .project-links a {
-            color: #667eea;
+            color: #e07a5f;
             text-decoration: none;
-            font-weight: 500;
+            font-weight: normal;
             transition: color 0.3s;
+            font-size: 1rem;
+            border-bottom: 1px solid #e07a5f;
         }
 
         .project-links a:hover {
-            color: #764ba2;
+            color: #f5f3ed;
+            border-bottom-color: #f5f3ed;
         }
 
         .contact-info {
-            background: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            background: #242424;
+            padding: 2.5rem;
+            border-left: 4px solid #e07a5f;
             max-width: 600px;
             margin: 0 auto;
-            text-align: center;
+        }
+
+        .contact-info p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
         }
 
         .contact-info a {
-            color: #667eea;
+            color: #e07a5f;
             text-decoration: none;
             display: block;
-            margin: 0.5rem 0;
+            margin: 0.8rem 0;
+            font-size: 1.1rem;
+            transition: color 0.3s;
         }
 
         .contact-info a:hover {
-            color: #764ba2;
+            color: #f5f3ed;
         }
 
         footer {
-            background: #333;
-            color: white;
+            background: #0f0f0f;
+            color: #f5f3ed;
             text-align: center;
             padding: 2rem;
             margin-top: 4rem;
         }
 
         @media (max-width: 768px) {
-            header h1 {
-                font-size: 2rem;
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 2rem;
             }
 
-            .projects-grid {
-                grid-template-columns: 1fr;
+            .header-left h1 {
+                font-size: 2.5rem;
+            }
+
+            nav {
+                margin-top: 1.5rem;
             }
 
             nav ul {
                 flex-direction: column;
-                align-items: center;
+                gap: 1rem;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Joanna Mialkowska</h1>
-        <p> Neurotechnology Master's Student & Bioengineer</p>
-        <p> joannamialko@gmail.com</p>
+        <div class="header-left">
+            <h1>Joanna Mialkowska</h1>
+            <p>Neurotechnology Master's Student & Bioengineer</p>
+            <p>joannamialko@gmail.com</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
-
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
 
     <div class="container">
         <section id="about">
             <h2>About Me</h2>
             <div class="about-content">
                 <p>Welcome to my page! I'm Joanna, currently a Master's student in neurotechnology at Imperial College London. I'm working on modeling neurotransmitters in neural organoids based on electrochemistry. We're characterizing how serotonin signalling works in human neurons and how it's impacted by pharmaceuticals like SSRIs - all to understand and develop better depression treatments.</p>
-                <p style="margin-top: 1rem;"> During my studies, I've focused biosignal processing, computational modeling and bioinstrumentation design. I recently graduated from Universtity of California San Diego where I built EEG processing and analysis pipelines for neuropsychiatric biomarker development. In general, I'm motivated by the idea of precision psychiatry - knowing someone's neurobiology, can we make them their perfect treatment? I think so.</p>
+                <p style="margin-top: 1rem;">During my studies, I've focused on biosignal processing, computational modeling and bioinstrumentation design. I recently graduated from University of California San Diego where I built EEG processing and analysis pipelines for neuropsychiatric biomarker development. In general, I'm motivated by the idea of precision psychiatry - knowing someone's neurobiology, can we make them their perfect treatment? I think so.</p>
             </div>
         </section>
 
@@ -224,8 +274,12 @@
             <h2>Projects</h2>
             <div class="projects-grid">
                 <div class="project-card">
-                    <h3>Serotonin Dynamics in Human-Derived Organoids </h3>
+                    <h3>Serotonin Dynamics in Human-Derived Organoids</h3>
                     <p>Creating a model of serotonin dynamics in human-derived serotonergic organoids based on fast scan cyclic voltammetry data. Aim is to characterize effects of antidepressants, estrogen, histamine etc. on serotonin signaling and understand how to treat depression better.</p>
+                    <div class="project-image">
+                        <!-- Replace with: <img src="path/to/your/image.jpg" alt="Project image"> -->
+                        <span>Project Image</span>
+                    </div>
                     <div class="tech-tags">
                         <span class="tech-tag">Python</span>
                         <span class="tech-tag">Computational Modeling</span>
@@ -237,8 +291,12 @@
                 </div>
 
                 <div class="project-card">
-                    <h3>Spine Sync: At-Home Scoliosis Rehabilitation </h3>
+                    <h3>Spine Sync: At-Home Scoliosis Rehabilitation</h3>
                     <p>Building an EMG-based neuromodulation system for accessible scoliosis rehabilitation. I'm the technical lead working on early-stage design and prototyping.</p>
+                    <div class="project-image">
+                        <!-- Replace with: <img src="path/to/your/image.jpg" alt="Project image"> -->
+                        <span>Project Image</span>
+                    </div>
                     <div class="tech-tags">
                         <span class="tech-tag">Bioinstrumentation Design</span>
                         <span class="tech-tag">Prototyping</span>                        
@@ -251,69 +309,88 @@
 
                 <div class="project-card">
                     <h3>EEG-Based Frequency Classifier</h3>
-                    <p> Built an end-to-end auditory EEG acquisition and analysis pipeline that enabled reproducible experiments and achieved 89% classification accuracy of auditory stimuli.</p>
+                    <p>Built an end-to-end auditory EEG acquisition and analysis pipeline that enabled reproducible experiments and achieved 89% classification accuracy of auditory stimuli.</p>
+                    <div class="project-image">
+                        <!-- Replace with: <img src="path/to/your/image.jpg" alt="Project image"> -->
+                        <span>Project Image</span>
+                    </div>
                     <div class="tech-tags">
                         <span class="tech-tag">Experiment Design</span>
                         <span class="tech-tag">Signal Processing</span>
                         <span class="tech-tag">EEG</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://sites.google.com/ucsd.edu/group-11-beng187/home?pli=1&authuser=2">Website →</a>
-                        <a href="https://docs.google.com/document/d/1J5d0IpT2vQJTZRV35LNhEkR10qixzxFNKfDESeNAIPc/edit?usp=sharing">Report →</a>
+                        <a href="https://sites.google.com/ucsd.edu/group-11-beng187/home?pli=1&authuser=2" target="_blank">Website</a>
+                        <a href="https://drive.google.com/file/d/YOUR_FILE_ID/view" target="_blank">Report PDF</a>
                     </div>
                 </div>
 
                 <div class="project-card">
-                    <h3>EMG Analog Circuit for Gamified Rehabilitation </h3>
+                    <h3>EMG Analog Circuit for Gamified Rehabilitation</h3>
                     <p>Designed and implemented a low-cost EMG acquisition system combining custom analog circuitry, Arduino firmware, and MATLAB-based signal analysis for a hands-free video game control system.</p>
+                    <div class="project-image">
+                        <!-- Replace with: <img src="path/to/your/image.jpg" alt="Project image"> -->
+                        <span>Project Image</span>
+                    </div>
                     <div class="tech-tags">
                         <span class="tech-tag">Prototyping</span>
                         <span class="tech-tag">Firmware</span>
                         <span class="tech-tag">Signal Processing</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/joannamialkowska/EMG-Data-Logger">GitHub →</a>
-                        <a href="https://docs.google.com/document/d/1moi1Ga76JypSY4Gzc1Cu196jrhpI1mp2Us2Kv1ijymE/edit?usp=sharing">Report →</a>
-
+                        <a href="https://github.com/joannamialkowska/EMG-Data-Logger" target="_blank">GitHub</a>
+                        <a href="https://drive.google.com/file/d/YOUR_FILE_ID/view" target="_blank">Report PDF</a>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <h3>Aneurysm Progression Simulation</h3>
-                    <p>Built a model for simulating aneurysm progression given patient characteristics, such as age sex and lifestyle factors. Model output a risk score aligned with literature, assisting in clinical decisionmaking.</p>
+                    <p>Built a model for simulating aneurysm progression given patient characteristics, such as age, sex and lifestyle factors. Model output a risk score aligned with literature, assisting in clinical decisionmaking.</p>
+                    <div class="project-image">
+                        <!-- Replace with: <img src="path/to/your/image.jpg" alt="Project image"> -->
+                        <span>Project Image</span>
+                    </div>
                     <div class="tech-tags">
                         <span class="tech-tag">Computational Modeling</span>
                         <span class="tech-tag">MATLAB</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/joannamialkowska/beng189-simulate-aneurysm">GitHub →</a>
-                        <a href="https://docs.google.com/document/d/1omr1Gz3p7XE9HaKLbXdrpTDRDSUmycyaUZtNzvc60d4/edit?usp=sharing">Report →</a>
+                        <a href="https://github.com/joannamialkowska/beng189-simulate-aneurysm" target="_blank">GitHub</a>
+                        <a href="https://drive.google.com/file/d/YOUR_FILE_ID/view" target="_blank">Report PDF</a>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <h3>EEG-Based Song Identification</h3>
                     <p>Developed an EEG processing and classification pipeline to decode perceived and imagined music, with results presented at a student-led neurotechnology conference.</p>
+                    <div class="project-image">
+                        <!-- Replace with: <img src="path/to/your/image.jpg" alt="Project image"> -->
+                        <span>Project Image</span>
+                    </div>
                     <div class="tech-tags">
                         <span class="tech-tag">Python</span>
                         <span class="tech-tag">Signal Processing</span>
                         <span class="tech-tag">EEG</span>
                     </div>
                     <div class="project-links">
-                        <a href="#">Poster →</a>
+                        <a href="https://drive.google.com/file/d/YOUR_FILE_ID/view" target="_blank">Poster PDF</a>
                     </div>
                 </div>
 
                 <div class="project-card">
-                    <h3> CAD-Designed Robot </h3>
-                    <p> Designed and built simple robot using Fusion360, laser cutting, 3D printing for the purpose of winning in-class dexterity competition.</p>
+                    <h3>CAD-Designed Robot</h3>
+                    <p>Designed and built simple robot using Fusion360, laser cutting, 3D printing for the purpose of winning in-class dexterity competition.</p>
+                    <div class="project-image">
+                        <!-- Replace with: <img src="path/to/your/image.jpg" alt="Project image"> -->
+                        <span>Project Image</span>
+                    </div>
                     <div class="tech-tags">
                         <span class="tech-tag">CAD</span>
                         <span class="tech-tag">Prototyping</span>
                         <span class="tech-tag">Laser Cutting</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://docs.google.com/document/d/1zii7fAPfrYagiWohdnCPj-30C7gyHE_s312Q5SsBKtk/edit?usp=sharing">Report →</a>
+                        <a href="https://drive.google.com/file/d/YOUR_FILE_ID/view" target="_blank">Report PDF</a>
                     </div>
                 </div>
             </div>
